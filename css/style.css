@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --bg-dark-color: #1f242d;
+    --text-dark-color: #ffffff;
+}
+
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
@@ -16,12 +25,17 @@ body {
     height: 10vh;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
+    padding: 0px 25px;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    background: var(--bg-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.nav-bar .my-name{
+.nav-bar .my-name {
     font-size: 30px;
-    margin: 30px 0 0 30px;
+    margin-left: 30px;
 }
 
 .nav-list {
@@ -36,6 +50,14 @@ body {
 .nav-list ul li {
     list-style: none;
     cursor: pointer;
+}
+
+.theme-change {
+    transition: transform 1s;
+}
+
+.theme-change:hover {
+    transform: rotate(45deg);
 }
 
 /* navbar start */
@@ -56,24 +78,24 @@ body {
     width: 135px;
     border-radius: 28px;
     height: 55px;
-    border: 8px solid black;
+    border: 8px solid var(--text-color);
 }
 
 
-.main .box1{
+.main .box1 {
     width: 40%;
 }
 
-.main .description{
+.main .description {
     margin-top: 20px;
 }
 
-.main .box1 .description{
+.main .box1 .description {
     width: 100%;
     padding: 0 10px;
 }
 
-.main-end{
+.main-end {
     height: 10vh;
     display: flex;
     align-items: center;
@@ -81,52 +103,57 @@ body {
     font-size: 17px;
 }
 
-.social-media{
+.social-media {
     display: flex;
     justify-content: space-around;
     margin-right: 50px;
 }
 
-.social-media li{
+.social-media li {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0 15px;
 }
 
-.social-media li a{
+.social-media li a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color);
 }
 
-.social-media img{
+.social-media li a:hover {
+    animation: press 0.2s;
+}
+
+.social-media img {
     margin-right: 7px;
 }
 
 /* skills section start */
 
-.skills{
-    height: 90vh;
+.skills {
+    /* height: 90vh; */
+    margin: 10vh 0;
     display: flex;
     padding: 5vh 10vw;
     justify-content: space-around;
 }
 
-.skills .skills-left{
+.skills .skills-left {
     width: 40%;
 }
 
-.skills .skills-right{
+.skills .skills-right {
     width: 30%;
 }
 
-.skills .skills-left .skill-heading{
+.skills .skills-left .skill-heading {
     font-size: 95px;
     font-weight: 500;
     margin: 0 0 10px 0;
 }
 
-.skills .skills-right .single-skill{
+.skills .skills-right .single-skill {
     display: flex;
     justify-content: space-between;
     font-size: 26px;
@@ -134,11 +161,11 @@ body {
     margin: 10px 0;
 }
 
-.skills .skills-right .single-skill-box{
+.skills .skills-right .single-skill-box {
     margin: 60px 0;
 }
 
-.skills .skills-right .line2{
+.skills .skills-right .line2 {
     width: 100%;
     display: inline-block;
     height: 3px;
@@ -146,14 +173,21 @@ body {
     position: absolute;
 }
 
-.skills .skills-right .line{
+.skills .skills-right .line {
     display: inline-block;
     height: 3px;
     background-color: #000000;
     z-index: 1;
+    animation: skillsani 4s 0.5s ease;
 }
 
-.skills .skills-right .circle{
+@keyframes skillsani {
+    from {
+        width: 0%;
+    }
+}
+
+.skills .skills-right .circle {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -163,7 +197,7 @@ body {
     border-radius: 50%;
 }
 
-.percentage-bar{
+.percentage-bar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -171,3 +205,140 @@ body {
 }
 
 /* skills section end */
+
+/* my project section start */
+
+.my-project {
+    /* height: 90vh; */
+    margin: 10vh 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.my-project .my-project-heading {
+    font-size: 75px;
+    font-weight: 500;
+}
+
+.my-project .single-project-box {
+    width: 70%;
+    height: 500px;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.my-project .single-project-box .project-img-box {
+    width: 60%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.my-project .single-project-box .project-desc-box {
+    width: 25%;
+}
+
+.my-project .single-project-box .project-desc-box h3 {
+    font-size: 40px;
+}
+
+.my-project .single-project-box .project-desc-box .view-details a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.my-project .single-project-box .project-desc-box .view-details a:hover {
+    animation: press 0.2s;
+}
+
+.my-project .single-project-box .project-desc-box .view-details img {
+    margin-left: 7px
+}
+
+.my-project .odd {
+    flex-direction: row;
+}
+
+.my-project .even {
+    flex-direction: row-reverse;
+}
+
+@keyframes press {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(2px);
+    }
+}
+
+
+/* my project section end */
+
+/* footer starts */
+
+.footer {
+    height: 40vh;
+    background-color: #262729;
+    color: #ffffff;
+}
+
+.footer .footer-end {
+    height: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-mid {
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    padding: 3rem 0;
+}
+
+.footer .footer-mid .footer-heading-text {
+    margin-bottom: 10px;
+}
+
+.footer .footer-mid a {
+    text-decoration: none;
+    color: #F6F6F650;
+    cursor: pointer;
+}
+
+.footer .footer-mid a:hover {
+    color: #ffffff;
+}
+
+.footer .footer-img {
+    width: 50vw;
+    height: 100%;
+    background-color: #F6F6F650;
+    /* background-image: url("https://images.pexels.com/photos/1297611/pexels-photo-1297611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.footer .hr-line-div {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .hr-line-div .hr-line {
+    width: 92%;
+    height: 2px;
+    background-color: #F6F6F650;
+}
+
+
+/* footer ends */

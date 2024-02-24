@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihir Prajapati</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
     <div class="nav-bar">
         <div class="nav-name">
-            <h1 class="my-name">Mihir <br> Prajapati</h1>
+            <p class="my-name">Mihir Prajapati</p>
         </div>
 
         <div class="nav-list">
             <ul>
                 <li>Home</li>
                 <li>About</li>
-                <li>Contact</li>
                 <li>Project</li>
+                <li onclick="changeTheme()"><img src="./icons/sun.svg" alt="" class="theme-change" id="theme-change">
+                </li>
             </ul>
         </div>
 
@@ -51,7 +53,7 @@
         </ul>
     </div>
 
-    <div class="skills">
+    <div class="skills" id="skills">
         <div class="skills-left">
             <p class="skill-heading">Special Skills</p>
             <p>I am very open to learn new things</p><br>
@@ -106,6 +108,72 @@
                     <span class="circle"></span>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="my-project" id="my-project">
+        <h2 class="my-project-heading">My Projects</h2>
+        <div class="single-project-box odd">
+            <div class="project-img-box"
+                style="background-image: url(https://s3-alpha.figma.com/hub/file/3484860920/9adac246-5cfb-4a66-94b7-c12179edf5f1-cover.png);">
+            </div>
+            <div class="project-desc-box">
+                <h3>Personal Website</h3>
+                <br>
+                <span class="view-details"><a href="#">View Details <img src="./icons/right.svg" alt=""
+                            srcset=""></a></span>
+            </div>
+        </div>
+
+        <div class="single-project-box even">
+            <div class="project-img-box"
+                style="background-image: url(https://cdn.shopify.com/s/files/1/0533/2089/files/web-design-portfolio-inspiration-sean-halpin.png?format=jpg&quality=90&v=1503510816);">
+            </div>
+            <div class="project-desc-box">
+                <h3>Chat Application</h3>
+                <br>
+                <span class="view-details"><a href="#">View Details <img src="./icons/right.svg" alt=""
+                            srcset=""></a></span>
+            </div>
+        </div>
+
+        <div class="single-project-box odd">
+            <div class="project-img-box"
+                style="background-image: url(https://5.imimg.com/data5/SELLER/Default/2021/12/LD/VB/PE/89700589/personal-portfolio-website-services.jpg);">
+            </div>
+            <div class="project-desc-box">
+                <h3>E-commerce site</h3>
+                <br>
+                <span class="view-details"><a href="#">View Details <img src="./icons/right.svg" alt=""
+                            srcset=""></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-mid">
+            <div>Mihir Prajapati</div>
+            <div>
+                <div class="footer-heading-text">Pages</div>
+                <p><a href="">Home</a></p>
+                <p><a href="">About</a></p>
+                <p><a href="#skills">Skills</a></p>
+                <p><a href="#my-project">Project</a></p>
+            </div>
+            <div>
+                <div class="footer-heading-text">Socials</div>
+                <p><a href="">INSTAGRAM</a></p>
+                <p><a href="">LINKEDIN</a></p>
+                <p><a href="">GITHUB</a></p>
+            </div>
+            <div class="footer-img">
+            </div>
+        </div>
+        <div class="hr-line-div">
+            <p class="hr-line"></p>
+        </div>
+        <div class="footer-end">
+            COPYRIGHT © MIHIR PRAJAPATI 2024. ALL RIGHTS RESERVED.
         </div>
     </div>
 </body>
