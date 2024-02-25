@@ -12,10 +12,14 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 18px;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    font-size: 18px !important;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+p{
+    margin-bottom: 0 !important;
 }
 
 /* navbar start */
@@ -43,6 +47,7 @@ body {
 }
 
 .nav-list ul {
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -111,12 +116,12 @@ body {
 
 .social-media li {
     list-style: none;
-    display: flex;
-    align-items: center;
     margin: 0 15px;
 }
 
 .social-media li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--text-color);
 }
@@ -176,8 +181,13 @@ body {
 .skills .skills-right .line {
     display: inline-block;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--text-color);
     z-index: 1;
+    width: 0; /* Set initial width to 0 */
+    transition: width 4s; /
+}
+
+.animate{
     animation: skillsani 4s 0.5s ease;
 }
 
@@ -282,6 +292,15 @@ body {
 
 
 /* my project section end */
+
+/* my project details start */
+
+.project-details-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* my project details end */
 
 /* footer starts */
 

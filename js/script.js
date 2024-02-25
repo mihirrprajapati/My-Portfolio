@@ -23,3 +23,22 @@ function changeTheme() {
         body.style.setProperty('--text-color', '#000000');
     }
 }
+
+let currentYear = new Date();
+document.getElementById('current-year').innerHTML = currentYear.getFullYear();
+document.getElementById('current-year').style.margin = "0 4px";
+
+window.addEventListener('scroll', () => {
+    const skillsSection = document.getElementById('skills');
+    const skillsPosition = skillsSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (skillsPosition < windowHeight * 0.75) { // Change 0.75 to adjust when the animation triggers
+        const lines = document.querySelectorAll('.line');
+        lines.forEach(line => {
+            const targetWidth = line.dataset.width;
+            line.style.width = targetWidth; // Set width to targetWidth to trigger animation
+        });
+    }
+});
+
