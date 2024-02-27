@@ -33,11 +33,11 @@ window.addEventListener('scroll', () => {
     const skillsPosition = skillsSection.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    if (skillsPosition < windowHeight * 0.75) { // Change 0.75 to adjust when the animation triggers
+    if (skillsPosition < windowHeight * 0.75) {
         const lines = document.querySelectorAll('.line');
         lines.forEach(line => {
             const targetWidth = line.dataset.width;
-            line.style.width = targetWidth; // Set width to targetWidth to trigger animation
+            line.style.width = targetWidth;
         });
     }
 });
