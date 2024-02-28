@@ -26,11 +26,11 @@ p {
 
 .nav-bar {
     display: flex;
-    height: 10vh;
+    /* height: 10vh; */
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
-    position: sticky;
+    position: sticky !important;
     z-index: 5;
     top: 0;
     background: var(--bg-color);
@@ -40,6 +40,11 @@ p {
 .nav-bar .my-name {
     font-size: 30px;
     margin-left: 30px;
+}
+
+.nav-font {
+    color: var(--text-color) !important;
+    /* margin: 0 1.5rem; */
 }
 
 .nav-list {
@@ -65,21 +70,26 @@ p {
     transform: rotate(45deg);
 }
 
-/* navbar start */
+
+/* navbar end */
+
+.first-box {
+    background-color: aqua;
+}
 
 .main {
     height: 80vh;
 }
 
 .main .front-end-text {
-    font-size: 125px;
+    font-size: 8vw;
 }
 
 .main .front-end-text .style-o {
     display: inline-block;
-    width: 135px;
+    width: 7rem;
     border-radius: 28px;
-    height: 55px;
+    height: 3.5rem;
     border: 8px solid var(--text-color);
 }
 
@@ -209,15 +219,7 @@ p {
 
 .my-project .single-project-box {
     height: 500px;
-    margin: 25px 0;
-}
-
-.my-project .single-project-box .project-img-box {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
+    margin: 5rem 0;
 }
 
 .my-project .single-project-box h3 {
@@ -309,10 +311,6 @@ p {
     width: 50vw;
     height: 100%;
     background-color: #F6F6F650;
-    /* background-image: url("https://images.pexels.com/photos/1297611/pexels-photo-1297611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
 }
 
 .footer .hr-line-div {
@@ -328,3 +326,41 @@ p {
 
 
 /* footer ends */
+
+@media only screen and (max-width: 991px) {
+
+    .main {
+        margin-top: 3vh;
+    }
+
+    .nav-bar .my-name {
+        font-size: 22px;
+        margin-left: 0;
+    }
+
+    .skills {
+        margin-top: 0;
+    }
+
+    .skills .skill-heading {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .social-media {
+        margin-right: 0;
+    }
+
+    .skills .single-skill-box {
+        margin: 45px 0;
+    }
+
+    .skills .single-skill {
+        font-size: 20px;
+    }
+
+    .my-project .my-project-heading {
+        font-size: 50px;
+    }
+}
