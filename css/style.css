@@ -218,7 +218,6 @@ p {
 }
 
 .my-project .single-project-box {
-    height: 500px;
     margin: 5rem 0;
 }
 
@@ -362,5 +361,9 @@ p {
 
     .my-project .my-project-heading {
         font-size: 50px;
+    }
+
+    .my-project .single-project-box h3 {
+        font-size: 30px;
     }
 }
