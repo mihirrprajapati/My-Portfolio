@@ -280,29 +280,15 @@ p {
 
 .footer .footer-end {
     height: 19%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.footer .footer-mid {
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-    padding: 3rem 0;
-}
-
-.footer .footer-mid .footer-heading-text {
-    margin-bottom: 10px;
-}
-
-.footer .footer-mid a {
+.footer .footer-secondary-text {
     text-decoration: none;
     color: #F6F6F650;
     cursor: pointer;
 }
 
-.footer .footer-mid a:hover {
+.footer .footer-secondary-text:hover {
     color: #ffffff;
 }
 
@@ -312,19 +298,27 @@ p {
     background-color: #F6F6F650;
 }
 
-.footer .hr-line-div {
-    display: flex;
-    justify-content: center;
-}
-
-.footer .hr-line-div .hr-line {
+.footer .hr-line {
     width: 92%;
     height: 2px;
     background-color: #F6F6F650;
 }
 
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 
 /* footer ends */
+
+/* project details start */
+
+.details-heading{
+    font-size: 4rem;
+}
+
+/* project details end */
 
 @media only screen and (max-width: 991px) {
 

@@ -11,14 +11,32 @@
 //     }
 // }
 
+const body = document.body;
+let socialIcons = document.getElementsByClassName('icon-light');
+let socialIconsDark = document.getElementsByClassName('icon-dark');
+
+let theme = localStorage.getItem("web-theme");
+if (theme === 'dark') {
+    body.style.setProperty('--bg-color', '#1f242d');
+    body.style.setProperty('--text-color', '#ffffff');
+    for (let i = 0; i < socialIcons.length; i++) {
+        socialIcons[i].style.display = "block";
+        socialIconsDark[i].style.display = "none";
+    }
+} else {
+    body.style.setProperty('--bg-color', '#ffffff');
+    body.style.setProperty('--text-color', '#000000');
+    for (let i = 0; i < socialIcons.length; i++) {
+        socialIcons[i].style.display = "none";
+        socialIconsDark[i].style.display = "block";
+    }
+}
+
 function changeTheme() {
-    const body = document.body;
     const currentColor = getComputedStyle(body).getPropertyValue('--bg-color').trim();
 
-    let socialIcons = document.getElementsByClassName('icon-light');
-    let socialIconsDark = document.getElementsByClassName('icon-dark');
-
     if (currentColor === '#ffffff') {
+        localStorage.setItem("web-theme", "dark");
         body.style.setProperty('--bg-color', '#1f242d');
         body.style.setProperty('--text-color', '#ffffff');
         for (let i = 0; i < socialIcons.length; i++) {
@@ -26,6 +44,7 @@ function changeTheme() {
             socialIconsDark[i].style.display = "none";
         }
     } else {
+        localStorage.setItem("web-theme", "light");
         body.style.setProperty('--bg-color', '#ffffff');
         body.style.setProperty('--text-color', '#000000');
         for (let i = 0; i < socialIcons.length; i++) {

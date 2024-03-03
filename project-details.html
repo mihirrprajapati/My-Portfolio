@@ -11,78 +11,91 @@
 </head>
 
 <body>
-    <div class="nav-bar">
-        <div class="nav-name navbar-brand">
-            <p class="my-name">Mihir Prajapati</p>
+    <nav class="nav-bar navbar navbar-expand-lg navbar-light py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <p class="my-name nav-font">Mihir Prajapati</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon nav-font"></span>
+            </button>
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-sm-12 col-md-9 col-lg-9 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active nav-font mx-3" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-font mx-3" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-font mx-3" href="#my-project">Project</a>
+                    </li>
+                    <li class="nav-item" onclick="changeTheme()">
+                        <a class="nav-link mx-3"><img src="./icons/sun.svg" alt="" class="theme-change icon-dark"
+                                id="theme-change"><img src="./icons/moon.svg" class="theme-change icon-light mt-1"
+                                id="theme-change"></a>
+                    </li>
+                </ul>
+                <div class="col-sm-12 col-md-3 col-lg-3 d-flex justify-content-lg-end">
+                    <div>
+                        <p>work.mihir19@gmail.com</p>
+                        <p>+91 84601-77165</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="nav-list">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Project</li>
-                <li onclick="changeTheme()"><img src="./icons/sun.svg" alt="" class="theme-change" id="theme-change">
-                </li>
-            </ul>
-        </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- <iframe width="100%" height="500" src="https://www.youtube.com/embed/pavJSLjL964?si=nnIqlZwga3_4JJ4F"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe> -->
+            </div>
+            <div class="col-12 mt-4 d-flex justify-content-between">
+                <div class="details-heading">Toy Mart</div>
 
-        <div class="nav-contact">
-            <p>work.mihir19@gmail.com</p>
-            <p>+91 84601-77165</p>
+            </div>
         </div>
     </div>
 
-    <div class="container">
-
-    </div>
-
-    <div class="container-fluid project-details-box my-5 w-75">
-        <div class="project-video-box w-50">
-            <video controls class="my-project-video w-100" poster="./image/Toymart1.png" controlsList="nodownload">
-                <source src="" type="video/mp4">
-            </video>
-        </div>
-        <div class="project-desc w-50 px-3">
-            <h2>Toy Mart</h2>
-            <p>Our Toy Mart Website manages the user info, admin info, order stock availability, user contact
-                information, and different categories of product and have multiple payment option for the users and have
-                add to cart and order summary feature.</p>
-            <p>Manages user info, admin info, order stock availability, user contact
-                information, different categories of products, multiple payment options for users, add to cart, and
-                order summary feature.</p>
-            <p>Front End: HTML, CSS, Bootstrap</p>
-            <p>Scripting Language: JavaScript</p>
-            <p>Back End: PHP</p>
-        </div>
-    </div>
-    
-
-    <div class="footer">
-        <div class="footer-mid">
-            <div>Mihir Prajapati</div>
+    <div class="footer container-fluid">
+        <div class="d-flex justify-content-around h-75 py-5">
             <div>
-                <div class="footer-heading-text">Pages</div>
-                <p><a href="./index.html">Home</a></p>
-                <p><a href="">About</a></p>
-                <p><a href="#skills">Skills</a></p>
-                <p><a href="#my-project">Project</a></p>
+                <h3>Mihir Prajapati</h3>
             </div>
             <div>
-                <div class="footer-heading-text">Socials</div>
-                <p><a href="">Instagram</a></p>
-                <p><a href="">LinkedIn</a></p>
-                <p><a href="">GitHub</a></p>
+                <div class="mb-3">Pages</div>
+                <p><a href="" class="footer-secondary-text">Home</a></p>
+                <p><a href="" class="footer-secondary-text">About</a></p>
+                <p><a href="#skills" class="footer-secondary-text">Skills</a></p>
+                <p><a href="#my-project" class="footer-secondary-text">Project</a></p>
             </div>
-            <div class="footer-img">
+            <div>
+                <div class="mb-3" class="footer-secondary-text">Socials</div>
+                <p><a href="" class="footer-secondary-text">Instagram</a></p>
+                <p><a href="https://www.linkedin.com/in/mihir-prajapati-77841a259" class="footer-secondary-text"
+                        target="_blank">LinkedIn</a></p>
+                <p><a href="https://github.com/mihirrprajapati" target="_blank" class="footer-secondary-text">GitHub</a>
+                </p>
+            </div>
+            <div class="d-none d-sm-block">
+                <p><a href="mailto:work.mihir19@gmail.com">work.mihir19@gmail.com</a></p>
+                <p>+91 84601-77165</p>
             </div>
         </div>
-        <div class="hr-line-div">
+        <div class="d-flex justify-content-center">
             <p class="hr-line"></p>
         </div>
-        <div class="footer-end">
+        <div class="footer-end d-flex justify-content-center align-items-center">
             COPYRIGHT © MIHIR PRAJAPATI <span id="current-year"></span>. ALL RIGHTS RESERVED.
         </div>
     </div>
+
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
